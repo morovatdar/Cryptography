@@ -1,43 +1,43 @@
-def LetterFrequency(text):
+import numpy as np
 
-    count = [0] * 26
-    #Count the letters
-    for i in range(26):
-        count[i] = text.count(chr(i+97))
+class Frequency:
 
-    frequency = [0] * 26
-    #Calculate the frequency of letters
-    for i in range(26):
-        frequency[i] = count[i] / sum(count)
+    def __init__(self):
+        pass
 
-    return frequency
+    def SingleFrequency(text):
+        #This function calculates the frequency of the different characters in the text
+        text = text.lower()
 
-if __name__ == "__main__":
+        freqlist = np.zeros((26,2))
+        totalcount = len(text)
+
+        for i in range(26):
+            freqlist[i,:] = [text.count(chr(i + 97)) / totalcount , i]
+
+        return freqlist
     
-    print('**************************************************************')
-    print('This program calculates the frequency of all letters in a text')
-    print('**************************************************************')
+        #return [[text.count(chr(i + 97)) / totalcount , i] for i in range(26)]
+
+
+    def PairFrequency(text):
+        #This function calculates the frequency of character pairs in the text
+
+        freqlist = np.zeros((26,26))
+        totalcount = len(text) - 1
+
+        for i in range(26):
+            for j in range(26):
+                freqlist[i,j] = text.count(chr(i+97)+chr(j+97)) / totalcount
+
+        return freqlist   
+
     
-    flag = False
-    while flag == False:
-        text = input("What is the text? ")
-        
-        #Check if the input text contains any letter
-        lettercount = 0
-        for char in text:
-            if char.isalpha():
-                lettercount += 1
-        if lettercount != 0:
-            flag = True
-            text = text.lower()
-        else:
-            print('The text should contain at least some letters!')
+    def Reference():
+        #This function shows the frequency of the different characters in English
 
-    #Call the letter frequency function
-    frequency = LetterFrequency(text)
+        reference1 = np.loadtxt('1frequency.txt')
+        reference1 = np.vstack((reference1, np.linspace(0, 25, num=26)))
+        reference1 = np.transpose(reference1)
 
-    #Print the result
-    print('The frequency of letters is as follows: ')
-    for i in range(26):
-        print(chr(i+97), round(frequency[i],2))
-
+        return reference1
