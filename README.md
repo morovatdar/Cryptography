@@ -1,21 +1,6 @@
 # Basic Algorithms for Cryptography
 
-I implemented the basic and fundamental algorithms required for cryptography.
-
-## Classical Cryptosystems (Classical.py)
-This module is connected to the classical cipher modules like Affine and Vigenere. The user has the option to choose the cipher method and then select the action they want to do (Encode, Decode, Attack).
-
-### Affine Ciphers (Affine.py)
-The affine cipher is a monoalphabetic substitution cipher, where each letter in an alphabet is mapped to its numeric equivalent, encrypted using a simple mathematical function, and converted back to a letter.  
-Other than encryption and decryption some affine cipher attacks are covered (Chosen plaintext, chosen-ciphertext, known plaintext, and Ciphertext only attacks).
- 
-### Vigenere Cipher (Vigenere.py)
-In the Vigenere cipher, each plaintext letter is shifted along different shift numbers in sequence.  
-Encryption, decryption, and frequency attack is implemented for this module.
-
-### Frequency Calculation (Frequency.py)
-The frequency tables of single letters (1frequency.txt) and letters pairs (2frequency.txt) in English text are considered for different attacks.
-
+Here, the basic and fundamental algorithms required for cryptography are implemented.
   
 
 ## Basic Number Theory (cryptomath.py)
@@ -31,6 +16,22 @@ Most of the essential number theory tools needed for Cryptography are implemente
 
   
 
+## Classical Cryptosystems (Classical.py)
+This module is connected to the classical cipher modules like Affine and Vigenere. The user has the option to choose the cipher method and then select the action they want to do (Encode, Decode, Attack).
+
+### Affine Ciphers (Affine.py)
+The affine cipher is a monoalphabetic substitution cipher, where each letter in an alphabet is mapped to its numeric equivalent, encrypted using a simple mathematical function, and converted back to a letter.  
+Other than encryption and decryption some affine cipher attacks are covered (Chosen plaintext, chosen ciphertext, known plaintext, and ciphertext only attacks).
+ 
+### Vigenere Cipher (Vigenere.py)
+In the Vigenere cipher, each plaintext letter is shifted along different shift numbers in sequence.  
+Encryption, decryption, and frequency attack are implemented for this module.
+
+### Frequency Calculation (Frequency.py)
+The frequency tables of single letters (1frequency.txt) and letters pairs (2frequency.txt) in English text are considered for different attacks.
+
+  
+
 ## Data Encryption Standard
 Data Encryption Standard (DES) is a symmetric key data encryption method. I implemented a simplified version of DES, Differential Cryptanalysis for the simplified DES, and finally the full 64-bit DES.
 
@@ -38,7 +39,7 @@ Data Encryption Standard (DES) is a symmetric key data encryption method. I impl
 Like DES, the simplified DES algorithm is a block cipher. It works with 12-bit blocks of plaintexts and ciphertext, and the key size is 9-bit. There is no limitation on the number of rounds, but four rounds are typical to use.
 
 ### Differential Cryptanalysis (Cryptanalysis.py)
-Differential cryptanalysis is a general form of cryptanalysis applicable primarily to block ciphers. In the broadest sense, it is the study of how differences in information input can affect the resultant difference at the output. I implemented 3-round and 4-round differential cryptanalysis to attack the simplified DES, which are simple forms of full cryptanalysis. 
+Differential cryptanalysis is a general form of cryptanalysis applicable primarily to block ciphers. In the broadest sense, it is the study of how differences in information input can affect the resultant difference in the output. I implemented 3-round and 4-round differential cryptanalysis to attack the simplified DES, which are simple forms of full cryptanalysis. 
 
 ### Full 64bit DES (FullDES.py)
 DES is a 64-bit block cipher with 16 rounds of encryption and a 64-bit key. 
