@@ -16,6 +16,8 @@ Encryption, decryption, and frequency attack is implemented for this module.
 ### Frequency Calculation (Frequency.py)
 The frequency tables of single letters (1frequency.txt) and letters pairs (2frequency.txt) in English text are considered for different attacks.
 
+  
+
 ## Basic Number Theory (cryptomath.py)
 Most of the essential number theory tools needed for Cryptography are implemented:
 - GCD: The great common divisor can be calculated easily by using the Euclidian algorithm. 
@@ -26,6 +28,8 @@ Most of the essential number theory tools needed for Cryptography are implemente
 - is prime: It tests the primality of integer n. 
 - Random Prime: It generates a random prime number between $2^{b+1}-1$ and $2^b-1$.
 - Factor: Three methods are used for factorizing an integer n: Fermat's method, Pollard rho, and Pollard p-1.
+
+  
 
 ## Data Encryption Standard
 Data Encryption Standard (DES) is a symmetric key data encryption method. I implemented a simplified version of DES, Differential Cryptanalysis for the simplified DES, and finally the full 64-bit DES.
@@ -38,6 +42,8 @@ Differential cryptanalysis is a general form of cryptanalysis applicable primari
 
 ### Full 64bit DES (FullDES.py)
 DES is a 64-bit block cipher with 16 rounds of encryption and a 64-bit key. 
+
+  
 
 ## RSA (RSA.py) 
 RSA (Rivest–Shamir–Adleman) is an asymmetric and public key cryptographic algorithm. 
